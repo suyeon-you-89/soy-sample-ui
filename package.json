@@ -1,0 +1,43 @@
+{
+  "name": "soy-sample-ui",
+  "version": "1.0.0",
+  "type": "module",    
+  "types": "dist/types/index.d.ts",     
+  "main": "dist/soy-sample-ui.cjs.js",          
+  "module": "dist/soy-sample-ui.es.js",   
+  "style": "dist/soy-sample-ui.css",
+  "exports": {
+    ".": {
+      "require": "./dist/soy-sample-ui.cjs.js",
+      "import": "./dist/soy-sample-ui.es.js"
+    },
+    "./soy-sample-ui.css": {
+      "default": "./dist/soy-sample-ui.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && node scripts/rename-css.js",
+    "clean": "rm -rf dist node_modules .vite package-lock.json && npm install"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.1",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
+    "sass": "^1.86.2",
+    "typescript": "^5.8.2",
+    "vite-plugin-dts": "^4.5.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
